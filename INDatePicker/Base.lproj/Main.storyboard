@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIb-m8-QLd" customClass="DateSelector">
+                                <rect key="frame" x="0.0" y="120" width="320" height="100"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQG-A7-n85">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3EC-7o-nAn"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQG-A7-n85" secondAttribute="trailing" id="N30-VT-2jP"/>
+                                    <constraint firstItem="fQG-A7-n85" firstAttribute="top" secondItem="AIb-m8-QLd" secondAttribute="top" id="moA-zV-L5E"/>
+                                    <constraint firstItem="fQG-A7-n85" firstAttribute="leading" secondItem="AIb-m8-QLd" secondAttribute="leading" id="tld-Be-3sH"/>
+                                    <constraint firstAttribute="bottom" secondItem="fQG-A7-n85" secondAttribute="bottom" id="wjn-66-lJA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dateSelector" destination="fQG-A7-n85" id="jHa-81-goa"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVc-O0-Uzl">
+                                <rect key="frame" x="20" y="260" width="280" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="bU5-Hl-YBF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nVc-O0-Uzl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="As7-qO-NYt"/>
+                            <constraint firstItem="AIb-m8-QLd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="WEh-Om-YkT"/>
+                            <constraint firstAttribute="trailing" secondItem="nVc-O0-Uzl" secondAttribute="trailing" constant="20" id="fhR-Ug-T18"/>
+                            <constraint firstItem="AIb-m8-QLd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n2d-p0-tki"/>
+                            <constraint firstAttribute="trailing" secondItem="AIb-m8-QLd" secondAttribute="trailing" id="pfg-nU-DAU"/>
+                            <constraint firstItem="nVc-O0-Uzl" firstAttribute="top" secondItem="AIb-m8-QLd" secondAttribute="bottom" constant="40" id="xdV-B2-mtN"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="540"/>
+                    <connections>
+                        <outlet property="currentSelectedDate" destination="nVc-O0-Uzl" id="rd2-m6-BTk"/>
+                        <outlet property="datePickerView" destination="AIb-m8-QLd" id="Se7-PD-Hij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="249" y="305"/>
         </scene>
     </scenes>
 </document>

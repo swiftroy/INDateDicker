@@ -15,6 +15,7 @@
 		EB2130F31D4C1FBF000689C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2130F11D4C1FBF000689C0 /* LaunchScreen.storyboard */; };
 		EB2130FE1D4C1FBF000689C0 /* INDatePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2130FD1D4C1FBF000689C0 /* INDatePickerTests.m */; };
 		EB2131091D4C1FBF000689C0 /* INDatePickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2131081D4C1FBF000689C0 /* INDatePickerUITests.m */; };
+		EB21311D1D4C201D000689C0 /* DateSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = EB21311C1D4C201D000689C0 /* DateSelector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		EB2131041D4C1FBF000689C0 /* INDatePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = INDatePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2131081D4C1FBF000689C0 /* INDatePickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INDatePickerUITests.m; sourceTree = "<group>"; };
 		EB21310A1D4C1FBF000689C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB21311B1D4C201D000689C0 /* DateSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelector.h; sourceTree = "<group>"; };
+		EB21311C1D4C201D000689C0 /* DateSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		EB2130E21D4C1FBF000689C0 /* INDatePicker */ = {
 			isa = PBXGroup;
 			children = (
+				EB21311A1D4C201D000689C0 /* DateSelector */,
 				EB2130E61D4C1FBF000689C0 /* AppDelegate.h */,
 				EB2130E71D4C1FBF000689C0 /* AppDelegate.m */,
 				EB2130E91D4C1FBF000689C0 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				EB21310A1D4C1FBF000689C0 /* Info.plist */,
 			);
 			path = INDatePickerUITests;
+			sourceTree = "<group>";
+		};
+		EB21311A1D4C201D000689C0 /* DateSelector */ = {
+			isa = PBXGroup;
+			children = (
+				EB21311B1D4C201D000689C0 /* DateSelector.h */,
+				EB21311C1D4C201D000689C0 /* DateSelector.m */,
+			);
+			path = DateSelector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB21311D1D4C201D000689C0 /* DateSelector.m in Sources */,
 				EB2130EB1D4C1FBF000689C0 /* ViewController.m in Sources */,
 				EB2130E81D4C1FBF000689C0 /* AppDelegate.m in Sources */,
 				EB2130E51D4C1FBF000689C0 /* main.m in Sources */,
@@ -414,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = INDatePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.troy.INDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = INDatePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.troy.INDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +512,7 @@
 				EB21310F1D4C1FBF000689C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB2131101D4C1FBF000689C0 /* Build configuration list for PBXNativeTarget "INDatePickerTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +521,7 @@
 				EB2131121D4C1FBF000689C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB2131131D4C1FBF000689C0 /* Build configuration list for PBXNativeTarget "INDatePickerUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +530,7 @@
 				EB2131151D4C1FBF000689C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

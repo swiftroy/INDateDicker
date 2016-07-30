@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DateSelector/DateSelector.h"
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet DateSelector *datePickerView;
+@property (weak, nonatomic) IBOutlet UILabel *currentSelectedDate;
 
 @end
 
